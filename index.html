@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title id="title">Monthly Global Land-Surface Temperature</title>
+
+    <link href="src/index.scss" rel="stylesheet">
+</head>
+<body>
+
+<h1 class="title" id="description">Monthly Global Land-Surface Temperature</h1>
+<h2 class="title">1753 - 2015: base temperature 8.66&#8451;</h2>
+
+<div class="plotWrap">
+    <svg id="plot"></svg>
+    <div class="tooltip-container">
+        <div aria-live="polite" class="tooltip hidden" id="tooltip"></div>
+    </div>
+</div>
+<script type="module" src="src/index.js"></script>
+</body>
+</html>
