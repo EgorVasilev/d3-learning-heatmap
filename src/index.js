@@ -11,13 +11,13 @@ import {
     range,
 } from 'd3';
 
-/* check #plot aspect-ration in CSS as well if you want to change it */
+/* check #plot aspect-ratio in CSS as well if you want to change it */
 const plotWidth = 1000;
 const plotHeight = 500;
 const plotPadding = 60;
 const plotBottomPadding = 100;
 
-function fetchGDP() {
+function fetchHeatData() {
     return fetch(
         'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json'
     ).then((response) => response.json());
@@ -161,7 +161,7 @@ function renderLegend({ baseTemperature: base, monthlyVariance: data }) {
 
 setPlotSize();
 
-fetchGDP()
+fetchHeatData()
     .then((result) => {
         renderHeatMap(result);
         renderLegend(result);
